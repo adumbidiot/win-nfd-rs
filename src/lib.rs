@@ -269,13 +269,13 @@ impl Default for FileSaveDialogBuilder<'_, '_, '_> {
 /// Default nfd open dialog.
 /// Look at this functions impl and write your own if you need more control
 pub fn nfd_open() -> Result<PathBuf, NfdError> {
-    FileOpenDialogBuilder::new().init_com().execute()?
+    FileOpenDialogBuilder::new().init_com().execute()
 }
 
 /// Default nfd save dialog.
 /// Look at this functions impl and write your own if you need more control
 pub fn nfd_save() -> Result<PathBuf, NfdError> {
-    FileSaveDialogBuilder::new().init_com().execute()?
+    FileSaveDialogBuilder::new().init_com().execute()
 }
 
 /// Shothand for `FileOpenDialogBuilder::new().init_com()`
