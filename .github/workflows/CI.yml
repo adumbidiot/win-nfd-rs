@@ -1,0 +1,89 @@
+name: Rust
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          components: clippy 
+          override: true
+      
+      - name: Fetch
+        uses: actions-rs/cargo@v1
+        with:
+          command: fetch
+      
+      - name: Clippy
+        uses: actions-rs/cargo@v1
+        with:
+          command: clippy
+          args: '--tests --all --all-features -- -D warnings'
+        
+  # We use nightly options for formatting,
+  # so split linting to add freedom to choose toolchains for the rest of the linting steps.       
+  lint-rustfmt:
+    name: Lint RustFmt
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          components: rustfmt
+          override: true
+          
+      - name: RustFmt
+        uses: actions-rs/cargo@v1
+        with:
+          command: fmt
+          args: '-- --check --color always'
+          
+  cargo-deny:
+    name: Deny
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Deny
+        uses: EmbarkStudios/cargo-deny-action@v1
+        
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Install Latest Stable Rust
+        uses: actions-rs/toolchain@v1
+        with:
+            profile: minimal
+            toolchain: stable
+        
+      - name: Build Pikadick
+        run: cargo build --verbose
+        
+      - name: Build All
+        run: cargo build --verbose --all --all-features
+        
+      - name: Run Tests
+        run: cargo test --all --verbose
+        
+      - name: Build Docs
+        run: cargo doc --verbose --all

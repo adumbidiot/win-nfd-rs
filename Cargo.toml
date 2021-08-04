@@ -1,0 +1,13 @@
+[package]
+name = "win-nfd"
+version = "0.0.0"
+edition = "2018"
+authors = [ "adumbidiot <nathaniel.daniel23@outlook.com>" ]
+
+[dependencies]
+skylight = { git = "https://github.com/adumbidiot/skylight-rs", features = [ "winerror", "objbase" ] }
+thiserror = "1.0.26"
+winapi = { version = "0.3.9", features = [ "shobjidl", "shobjidl_core", "shellapi" ] } # Shellapi is needed for `SHCreateItemFromParsingName`
+
+[dev-dependencies]
+winapi = { version = "0.3.9", features = [ "shellscalingapi" ] }
