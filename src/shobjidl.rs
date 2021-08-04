@@ -519,7 +519,7 @@ mod test {
     fn bad_id_list_creation() {
         // This rejects relative paths
         let rel_path = CWideString::new("./Cargo.toml").expect("invalid c wide string");
-        let id_list = ItemIdList::create_from_path(&rel_path).unwrap_err();
+        let _id_list = ItemIdList::create_from_path(&rel_path).unwrap_err();
 
         // I don't know why it does this, but im creating a test to remember that it does this.
         // assert_eq!(id_list.0, 1008);
