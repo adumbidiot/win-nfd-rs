@@ -3,6 +3,7 @@ name = "win-nfd"
 version = "0.0.0"
 edition = "2018"
 authors = [ "adumbidiot <nathaniel.daniel23@outlook.com>" ]
+license = "MIT"
 
 [dependencies]
 skylight = { git = "https://github.com/adumbidiot/skylight-rs", features = [ "winerror", "objbase" ] }
