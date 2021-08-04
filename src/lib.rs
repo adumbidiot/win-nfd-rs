@@ -112,7 +112,7 @@ impl<'a, 'b, 'c> FileOpenDialogBuilder<'a, 'b, 'c> {
         }
 
         if let Some(path) = self.path {
-            let shell_item = ShellItem::from_path(&path)?;
+            let shell_item = ShellItem::from_path(path)?;
             dialog.set_folder(shell_item)?;
         }
 
@@ -229,7 +229,7 @@ impl<'a, 'b, 'c> FileSaveDialogBuilder<'a, 'b, 'c> {
         }
 
         if let Some(path) = self.path {
-            let shell_item = ShellItem::from_path(&path)?;
+            let shell_item = ShellItem::from_path(path)?;
             dialog.set_folder(shell_item)?;
         }
 
@@ -269,13 +269,13 @@ impl Default for FileSaveDialogBuilder<'_, '_, '_> {
 /// Default nfd open dialog.
 /// Look at this functions impl and write your own if you need more control
 pub fn nfd_open() -> Result<PathBuf, NfdError> {
-    Ok(FileOpenDialogBuilder::new().init_com().execute()?)
+    FileOpenDialogBuilder::new().init_com().execute()?
 }
 
 /// Default nfd save dialog.
 /// Look at this functions impl and write your own if you need more control
 pub fn nfd_save() -> Result<PathBuf, NfdError> {
-    Ok(FileSaveDialogBuilder::new().init_com().execute()?)
+    FileSaveDialogBuilder::new().init_com().execute()?
 }
 
 /// Shothand for `FileOpenDialogBuilder::new().init_com()`
