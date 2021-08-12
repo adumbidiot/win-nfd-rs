@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "bitflags"
-version = "1.2.1"
+version = "1.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cf1de2fe8c75bc145a2f577add951f8134889b4795d47466a54a5c846d691693"
+checksum = "2da1976d75adbe5fbc88130ecd119529cf1cc6a93ae1546d8696ee66f0d21af1"
 
 [[package]]
 name = "proc-macro2"
@@ -29,7 +29,7 @@ dependencies = [
 [[package]]
 name = "skylight"
 version = "0.0.0"
-source = "git+https://github.com/adumbidiot/skylight-rs#972afb456817c0584145c84d16d925539de05fbf"
+source = "git+https://github.com/adumbidiot/skylight-rs#c9a117139c148f72a7385431743254d60f4e6fc2"
 dependencies = [
  "bitflags",
  "winapi",
