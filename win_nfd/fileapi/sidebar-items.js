@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["get_full_path_name","Get the full path name."]]});
