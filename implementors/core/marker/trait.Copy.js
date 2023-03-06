@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"win_nfd":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.67.1/core/marker/trait.Copy.html\" title=\"trait core::marker::Copy\">Copy</a> for <a class=\"enum\" href=\"win_nfd/shobjidl/enum.DisplayNameType.html\" title=\"enum win_nfd::shobjidl::DisplayNameType\">DisplayNameType</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

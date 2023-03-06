@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["get_full_path_name","Get the full path name."]]};

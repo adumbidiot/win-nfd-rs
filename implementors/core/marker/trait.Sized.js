@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"win_nfd":[["impl !<a class=\"trait\" href=\"https://doc.rust-lang.org/1.67.1/core/marker/trait.Sized.html\" title=\"trait core::marker::Sized\">Sized</a> for <a class=\"struct\" href=\"win_nfd/c_wide_string/struct.CWideStr.html\" title=\"struct win_nfd::c_wide_string::CWideStr\">CWideStr</a>",1,["win_nfd::c_wide_string::CWideStr"]]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

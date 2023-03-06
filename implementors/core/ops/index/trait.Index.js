@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"win_nfd":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.67.1/core/ops/index/trait.Index.html\" title=\"trait core::ops::index::Index\">Index</a>&lt;<a class=\"struct\" href=\"https://doc.rust-lang.org/1.67.1/core/ops/range/struct.RangeFrom.html\" title=\"struct core::ops::range::RangeFrom\">RangeFrom</a>&lt;<a class=\"primitive\" href=\"https://doc.rust-lang.org/1.67.1/std/primitive.usize.html\">usize</a>&gt;&gt; for <a class=\"struct\" href=\"win_nfd/c_wide_string/struct.CWideStr.html\" title=\"struct win_nfd::c_wide_string::CWideStr\">CWideStr</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

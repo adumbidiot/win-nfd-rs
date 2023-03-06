@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["FromWideWithNulErrorKind",""]],"struct":[["CWideStr",""],["CWideString","A wide analog of https://doc.rust-lang.org/std/ffi/struct.CString.html"],["FromVecWithNulError",""],["NulError",""]],"trait":[["IntoWide","Implemented for types that can be converted into wide types"]]};
